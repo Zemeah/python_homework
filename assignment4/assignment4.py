@@ -82,7 +82,7 @@ print("\nAfter converting Age to numeric:")
 print(clean_data)
 
 
-clean_data["Salary"] = clean_data["Salary"].replace(["unknown", "n/a"], np.nan)
+clean_data["Salary"] = clean_data["Salary"].replace(["unknown", "n/a"], pd.NA)
 clean_data["Salary"] = pd.to_numeric(clean_data["Salary"], errors="coerce")
 print("\nAfter cleaning Salary:")
 print(clean_data)
@@ -100,7 +100,7 @@ print("\nAfter converting Hire Date:")
 print(clean_data)
 
 
-clean_data["Name"] = clean_data["Name"].str.strip().str.upper()
+clean_data["Name"] = clean_data["Name"].str.strip()
 clean_data["Department"] = clean_data["Department"].str.strip().str.upper()
 print("\nFinal Cleaned Data:")
 print(clean_data)
